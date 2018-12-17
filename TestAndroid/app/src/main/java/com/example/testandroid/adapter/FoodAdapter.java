@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-public class FoodAdapter  extends RecyclerView.Adapter{
+public class FoodAdapter  {
 
 
     List Foodlist;
@@ -16,26 +16,26 @@ public class FoodAdapter  extends RecyclerView.Adapter{
 
     }
 
-    @Override
-    public MyViewHolder onCreateViewHolder (ViewGroup parent,int viewType){
-        View view = LayoutInflater.from(parent.getContext()).inflate();
-
-    }
-    @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return 0;
-    }
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-
-        public MyViewHolder(View itemView) {
-            super(itemView);
-
-        }
-    }
+//    @Override
+//    public MyViewHolder onCreateViewHolder (ViewGroup parent,int viewType){
+//        View view = LayoutInflater.from(parent.getContext()).inflate();
+//
+//    }
+//    @Override
+//    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+//
+//    }
+//
+//    @Override
+//    public int getItemCount() {
+//        return 0;
+//    }
+//
+//    public class MyViewHolder extends RecyclerView.ViewHolder {
+//
+//        public MyViewHolder(View itemView) {
+//            super(itemView);
+//
+//        }
+//    }
 }

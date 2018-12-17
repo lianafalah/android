@@ -49,9 +49,10 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginRight="15dp"
                 android:background="@color/abu">
             <ImageView
                 android:layout_width="160dp"
@@ -64,8 +65,29 @@
                 android:layout_height="wrap_content"
                 android:text="Caramel Signature "
                 android:textStyle="bold"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/abu">
+                <ImageView
+                    android:layout_width="160dp"
+                    android:id="@+id/ImageItem2"
+                    android:layout_height="160dp"
+                    android:src="@drawable/imagebelumload"/>
+                <TextView
+                    android:id="@+id/NamaItem2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caramel Signature "
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
 
         </LinearLayout>
 

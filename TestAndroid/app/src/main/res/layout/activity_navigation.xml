@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".NavigationActivity"
     android:id="@+id/drawer"
-    android:layout_marginRight="16dp"
+    android:background="@drawable/home"
     >
 
     <android.support.design.widget.NavigationView
@@ -20,5 +20,35 @@
         android:layout_gravity="start">
 
     </android.support.design.widget.NavigationView>
+
+    <include layout="@layout/toolbar_home"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hows your day? Need a Coffee break?"
+            android:textColor="#fff"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guntur Saputro"
+            android:textColor="#fff"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="IDR 279000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="1 Beans"/>
+    </LinearLayout>
+
 
 </android.support.v4.widget.DrawerLayout>

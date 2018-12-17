@@ -41,7 +41,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:text="Sign"
+            android:text="Sign In"
             android:textColor="#fff"
             android:background="@color/colorPrimaryDark"
             android:layout_marginBottom="20dp"
@@ -64,8 +64,8 @@
                 android:layout_height="wrap_content"
                 android:text="Sign Up here"
                 android:textStyle="bold"
-                android:onClick="signup"
                 android:textColor="#fff"/>
+                <!--android:onClick="signup"-->
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -74,5 +74,4 @@
             android:textColor="#fff"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
-
 </LinearLayout>

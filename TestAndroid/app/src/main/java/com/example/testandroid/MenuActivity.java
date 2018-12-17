@@ -10,7 +10,6 @@ import com.example.testandroid.controller.DevPagerAdapter;
 
 public class MenuActivity extends AppCompatActivity {
     Toolbar toolbar;
-
     private ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +18,6 @@ public class MenuActivity extends AppCompatActivity {
         toolbar=(Toolbar) findViewById(R.id.toolbar_menu);
         viewPager =findViewById(R.id.viewPager);
         viewPager.setAdapter(new DevPagerAdapter(getSupportFragmentManager()));
-
         TabLayout tabs = findViewById(R.id.tabLayoutId);
         tabs.setupWithViewPager(viewPager);
 
