@@ -9,19 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".MenuActivity">
+        <activity android:name=".MainActivity" >
+        </activity>
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NavigationActivity" />
-        <activity android:name=".view.SingleItemActivity" />
+        <activity android:name=".SignUpActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MenuActivity">
+
+        </activity>
+        <activity android:name=".NavigationActivity" >
+        </activity>
         <activity android:name=".SingleItemActivity"></activity>
     </application>
 

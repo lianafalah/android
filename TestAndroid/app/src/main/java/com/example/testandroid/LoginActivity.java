@@ -14,6 +14,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
     }
     public void signup(View view){
