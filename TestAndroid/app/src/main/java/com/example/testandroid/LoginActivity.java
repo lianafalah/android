@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import com.example.testandroid.data.ApiClient;
 import com.example.testandroid.data.ApiService;
+import com.example.testandroid.model.Login;
 import com.example.testandroid.model.LoginResponse;
 
 import retrofit2.Call;
@@ -39,11 +40,21 @@ public class LoginActivity extends AppCompatActivity {
         EditText email = findViewById(R.id.loginEmail);
         EditText password = findViewById(R.id.loginPassword);
 
-        Call<LoginResponse> call = apiService.postLoginData(email.getText().toString(), password.getText().toString(), "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
+        Log.i("### PASS ", "login: " + password.getText().toString());
+        Login Body = new Login(email.getText().toString(), password.getText().toString());
+        Call<LoginResponse> call = apiService.postLoginData(Body, "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                Log.i("### LIANA", "onResponse login: " + response.body().username);
+                if(response.isSuccessful()) {
+                    Log.i("### LIANA", "onResponse login: " + response.body().token);
+                    Log.i("### LIANA", "onResponse login: " + response.body().username);
+                    Log.i("### LIANA", "onResponse login: " + response.body().foto);
+                    Log.i("### LIANA", "onResponse login: " + response.body().status);
+                    Log.i("### LIANA", "onResponse login: " + response.body().mobilePhoneUser);
+                } else {
+
+                }
             }
 
             @Override
