@@ -7,4 +7,6 @@
     <color name="Transparents">#9dffffff</color>
     <color name="Transparent80">#80000000</color>
     <color name="semiwhite">#f2f1f1</color>
+    <color name="white">#ffffff</color>
+    <color name="darkGray">#6c6c6c</color>
 </resources>

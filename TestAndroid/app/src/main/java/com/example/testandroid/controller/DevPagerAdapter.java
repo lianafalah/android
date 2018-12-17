@@ -12,7 +12,6 @@ public class DevPagerAdapter extends FragmentPagerAdapter {
     public DevPagerAdapter(FragmentManager fm) {
         super(fm);
     }
-
     @Override
     public Fragment getItem(int i) {
         switch (i){

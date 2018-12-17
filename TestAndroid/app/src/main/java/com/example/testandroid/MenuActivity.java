@@ -12,17 +12,16 @@ public class MenuActivity extends AppCompatActivity {
     Toolbar toolbar;
 
     private ViewPager viewPager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         toolbar=(Toolbar) findViewById(R.id.toolbar_menu);
-
         viewPager =findViewById(R.id.viewPager);
         viewPager.setAdapter(new DevPagerAdapter(getSupportFragmentManager()));
+
         TabLayout tabs = findViewById(R.id.tabLayoutId);
         tabs.setupWithViewPager(viewPager);
+
     }
 }
