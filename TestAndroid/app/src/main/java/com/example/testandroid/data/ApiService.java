@@ -1,5 +1,6 @@
 package com.example.testandroid.data;
 
+import com.example.testandroid.model.HomeModel;
 import com.example.testandroid.model.Login;
 import com.example.testandroid.model.LoginResponse;
 
@@ -15,4 +16,7 @@ public interface ApiService {
     @POST("login")
     Call<LoginResponse> postLoginData(@Body Login Body,
                                       @Header("Authorization") String authorization);
+
+    @POST("v2/home")
+    Call<HomeModel> postHome(@Header("Authorization") String authorization);
 }
