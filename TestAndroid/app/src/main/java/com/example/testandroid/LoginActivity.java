@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText email = findViewById(R.id.loginEmail);
         EditText password = findViewById(R.id.loginPassword);
 
-        Call<LoginResponse> call = apiService.postLoginData(email.getText().toString(), password.getText().toString(), "Bearrer");
+        Call<LoginResponse> call = apiService.postLoginData(email.getText().toString(), password.getText().toString(), "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
