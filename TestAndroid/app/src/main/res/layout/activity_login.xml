@@ -21,11 +21,16 @@
             android:layout_marginBottom="5dp"
             />
         <EditText
+<<<<<<< HEAD
             android:id="@+id/EmailEt"
+=======
+            android:id="@+id/loginEmail"
+>>>>>>> 4c1aeafeb669a04330999b464dab98ab8837afec
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/Transparents"
             android:layout_marginBottom="10dp"
+            android:text="support@technopartner.id"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -34,12 +39,18 @@
             android:textColor="#fff"
             android:layout_marginBottom="5dp"/>
         <EditText
+<<<<<<< HEAD
             android:id="@+id/passwordED"
+=======
+            android:id="@+id/loginPassword"
+>>>>>>> 4c1aeafeb669a04330999b464dab98ab8837afec
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="textPassword"
             android:background="@color/Transparents"
             android:layout_marginBottom="20dp"
+            android:inputType="textPassword"
+            android:text="1234567"
             />
         <Button
             android:layout_width="match_parent"
@@ -49,6 +60,10 @@
             android:textColor="#fff"
             android:background="@color/colorPrimaryDark"
             android:layout_marginBottom="20dp"
+<<<<<<< HEAD
+=======
+            android:onClick="login"
+>>>>>>> 4c1aeafeb669a04330999b464dab98ab8837afec
             />
         <LinearLayout
             android:layout_width="wrap_content"

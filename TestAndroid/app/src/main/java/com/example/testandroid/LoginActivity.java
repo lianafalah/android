@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+
 import android.widget.Button;
 import android.widget.EditText;
 import com.example.testandroid.data.ApiClient;
 import com.example.testandroid.data.ApiService;
+import com.example.testandroid.model.Login;
 import com.example.testandroid.model.LoginResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,6 +20,8 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
     Toolbar toolbar;
     ApiService apiService;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +37,18 @@ public class LoginActivity extends AppCompatActivity {
     public void logins(View view) {
         EditText email = findViewById(R.id.EmailEt);
         EditText password = findViewById(R.id.passwordED);
-        Call<LoginResponse> call = apiService.postLoginData(email.getText().toString(), password.getText().toString(), "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
+        //Call<LoginResponse> call = apiService.postLoginData(email.getText().toString(), password.getText().toString(), "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
+
+
+        Log.i("### PASS ", "login: " + password.getText().toString());
+        Login Body = new Login(email.getText().toString(), password.getText().toString());
+        Call<LoginResponse> call = apiService.postLoginData(Body, "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
+
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if(response.isSuccessful()) {
+
                     Log.i("### token", "onResponse login: " + response.body().token);
                     Log.i("### username", "onResponse login: " + response.body().username);
                     Log.i("### foto", "onResponse login: " + response.body().foto);
@@ -49,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
             }
+
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Log.i("### ERROR", "onFailure: " + t.getMessage());
@@ -56,3 +68,4 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 }
+

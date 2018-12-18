@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.testandroid">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET"/>
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+
+>>>>>>> 4c1aeafeb669a04330999b464dab98ab8837afec
     <application
         android:allowBackup="true"
         android:usesCleartextTraffic="true"

@@ -13,11 +13,11 @@ import retrofit2.http.POST;
 
 public interface ApiService {
 
-    @FormUrlEncoded
+
     @POST("login")
-    Call<LoginResponse> postLoginData(@Field("email") String email,
-                                      @Field("password") String password,
+    Call<LoginResponse> postLoginData(@Body Login Body,
                                       @Header("Authorization") String authorization);
+
 
     /*
     @POST("login")
@@ -26,6 +26,7 @@ public interface ApiService {
 
 
                                       */
+
     @POST("v2/home")
     Call<HomeModel> postHome(@Header("Authorization") String authorization);
 }
