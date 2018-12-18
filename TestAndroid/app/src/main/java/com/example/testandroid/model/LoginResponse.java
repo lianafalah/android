@@ -3,6 +3,7 @@ package com.example.testandroid.model;
 import com.google.gson.annotations.SerializedName;
 
 public class LoginResponse {
+
     @SerializedName("status") public String status;
     @SerializedName("remember") public Object remember;
     @SerializedName("token") public String token;
@@ -14,4 +15,5 @@ public class LoginResponse {
     @SerializedName("greeting") public String greeting;
     @SerializedName("balance_total") public int balanceTotal;
     @SerializedName("beans") public int beans;
+
 }

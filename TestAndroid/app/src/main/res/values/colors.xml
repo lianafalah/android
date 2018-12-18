@@ -10,4 +10,10 @@
     <color name="white">#ffffff</color>
     <color name="darkGray">#6c6c6c</color>
     <color name="abu">#d6d4d4</color>
+    <color name="black">#000</color>
+    <color name="gray">#818181</color>
+    <color name="whiteTransparentBottom">#afffffff</color>
+    <color name="default_bg_white">#FAFAFA</color>
+    <color name="green_signup">#409b2f</color>
+    <color name="card_color">#d2d2d2</color>
 </resources>
