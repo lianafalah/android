@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,9 +16,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.testandroid.R;
+import com.example.testandroid.data.ApiClient;
+import com.example.testandroid.data.ApiService;
+import com.example.testandroid.model.HomeModel;
+import com.example.testandroid.model.HomeResponse;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeAppActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private String userToken;
+    private ApiService apiService;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +38,14 @@ public class HomeAppActivity extends AppCompatActivity
         setContentView(R.layout.activity_home_app);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        apiService = ApiClient.getClient().create(ApiService.class);
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null) {
+            userToken = bundle.getString("UserToken");
+        }
+
+        loadData();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +64,29 @@ public class HomeAppActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void loadData() {
+        Log.i("#### TEST", "loadData: " + userToken);
+
+        HomeModel body = new HomeModel(userToken);
+        Call<HomeResponse> call = apiService.postHome(body, "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
+        call.enqueue(new Callback<HomeResponse>() {
+            @Override
+            public void onResponse(Call<HomeResponse> call, Response<HomeResponse> response) {
+                Log.i("### FALAH", "onResponse: " + response.body().email);
+                Log.i("### FALAH", "onResponse: " + response.body().salam);
+                Log.i("### FALAH", "onResponse: " + response.body().username);
+                Log.i("### FALAH", "onResponse: " + response.body().primaryCard.cardNumber);
+
+//                NAK DATANYA DI SINI, SET TEXT, DLL DILAKUKAN DI SINI!!
+            }
+
+            @Override
+            public void onFailure(Call<HomeResponse> call, Throwable t) {
+
+            }
+        });
     }
 
     @Override
