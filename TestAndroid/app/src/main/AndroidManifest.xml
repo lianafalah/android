@@ -13,22 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity">
-
-        </activity>
-        <activity
-            android:name=".activity.LoginActivity"
-            android:parentActivityName=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:parentActivityName=".activity.MainActivity">
         </activity>
         <activity
             android:name=".activity.SignUpActivity"
             android:parentActivityName=".activity.MainActivity" />
-        <activity android:name=".HomeActivity" />
+
         <activity android:name=".activity.MenuActivity"></activity>
         <activity android:name=".SingleItemActivity" />
         <activity
@@ -36,5 +34,4 @@
             android:label="@string/title_activity_home_app"
             android:theme="@style/AppTheme"></activity>
     </application>
-
 </manifest>
