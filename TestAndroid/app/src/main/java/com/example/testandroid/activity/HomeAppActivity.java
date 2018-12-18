@@ -29,6 +29,7 @@ public class HomeAppActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private String userToken;
+    private String accessToken;
     private ApiService apiService;
 
 
@@ -43,6 +44,7 @@ public class HomeAppActivity extends AppCompatActivity
         Bundle bundle = getIntent().getExtras();
         if(bundle != null) {
             userToken = bundle.getString("UserToken");
+            accessToken = bundle.getString("AccessToken");
         }
 
         loadData();
@@ -67,10 +69,8 @@ public class HomeAppActivity extends AppCompatActivity
     }
 
     private void loadData() {
-        Log.i("#### TEST", "loadData: " + userToken);
-
         HomeModel body = new HomeModel(userToken);
-        Call<HomeResponse> call = apiService.postHome(body, "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
+        Call<HomeResponse> call = apiService.postHome(body, "Bearer " + accessToken);
         call.enqueue(new Callback<HomeResponse>() {
             @Override
             public void onResponse(Call<HomeResponse> call, Response<HomeResponse> response) {

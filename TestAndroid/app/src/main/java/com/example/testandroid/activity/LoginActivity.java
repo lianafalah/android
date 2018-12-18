@@ -21,6 +21,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
     Toolbar toolbar;
     ApiService apiService;
+    String accessToken;
 
 
     @Override
@@ -30,6 +31,11 @@ public class LoginActivity extends AppCompatActivity {
         toolbar=(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         apiService = ApiClient.getClient().create(ApiService.class);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null) {
+            accessToken = bundle.getString("AccessToken");
+        }
     }
     public void signUp(View view){
         Intent intent= new Intent(LoginActivity.this, SignUpActivity.class);
@@ -41,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         //Call<LoginResponse> call = apiService.postLoginData(email.getText().toString(), password.getText().toString(), "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
         Log.i("### PASS ", "login: " + password.getText().toString());
         Login Body = new Login(email.getText().toString(), password.getText().toString());
-        Call<LoginResponse> call = apiService.postLoginData(Body, "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
+        Call<LoginResponse> call = apiService.postLoginData(Body, "Bearer " + accessToken);
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
@@ -57,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     Intent home= new Intent(LoginActivity.this, HomeAppActivity.class);
                     home.putExtra("UserToken", response.body().token);
+                    home.putExtra("AccessToken", accessToken);
                     startActivity(home);
                 } else {
                 }
