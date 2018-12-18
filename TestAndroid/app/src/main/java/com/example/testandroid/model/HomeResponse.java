@@ -4,27 +4,31 @@ import com.google.gson.annotations.SerializedName;
 
 public class HomeResponse {
 
-    @SerializedName("token") public String token;
     @SerializedName("salam") public String salam;
-    @SerializedName("beans") public String beans;
-    @SerializedName("point") public String point;
-    @SerializedName("balance") public String balance;
+    @SerializedName("beans") public int beans;
+    @SerializedName("point") public int point;
+    @SerializedName("balance") public int balance;
     @SerializedName("username") public String username;
-    @SerializedName("primaryCard") public String primaryCard;
-    @SerializedName("id_card") public String id_card;
-    @SerializedName("card_number") public String card_number;
-    @SerializedName("card_name") public String card_name;
-    @SerializedName("card_image") public String card_image;
-    @SerializedName("barcode") public String barcode;
-    @SerializedName("distribution_id") public String distribution_id;
-    @SerializedName("card_pin") public String card_pin;
-    @SerializedName("expired_date") public String expired_date;
-    @SerializedName("virtual_card") public String virtual_card;
+    @SerializedName("primaryCard") public PrimaryCard primaryCard;
+    @SerializedName("virtual_card") public int virtualCard;
     @SerializedName("email") public String email;
     @SerializedName("phone") public String phone;
     @SerializedName("referralCode") public String referralCode;
-    @SerializedName("verifikasi_email") public String verifikasi_email;
-    @SerializedName("verifikasi_sms") public String verifikasi_sms;
-    @SerializedName("cardAmaount") public String cardAmount;
+    @SerializedName("verifikasi_email") public String verifikasiEmail;
+    @SerializedName("verifikasi_sms") public String verifikasiSms;
+    @SerializedName("cardAmount") public int cardAmount;
+
+    public class PrimaryCard {
+        @SerializedName("id_card")public String idCard;
+        @SerializedName("card_number")public String cardNumber;
+        @SerializedName("card_name")public String cardName;
+        @SerializedName("card_image")public String cardImage;
+        @SerializedName("barcode")public String barcode;
+        @SerializedName("distribution_id")public String distributionId;
+        @SerializedName("card_pin")public String cardPin;
+        @SerializedName("beans")public int beans;
+        @SerializedName("expired_date")public String expiredDate;
+        @SerializedName("balance")public int balance;
+    }
 
 }
