@@ -7,7 +7,7 @@
     android:background="@drawable/home"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <ImageView
         android:layout_width="20dp"
@@ -24,7 +24,6 @@
     <Space
         android:layout_width="wrap_content"
         android:layout_height="370dp" />
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -33,7 +32,6 @@
         android:onClick="signup"
         android:text="Sign UP"
         android:textColor="#fff" />
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="45dp"

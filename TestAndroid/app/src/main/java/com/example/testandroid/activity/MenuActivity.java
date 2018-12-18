@@ -1,4 +1,4 @@
-package com.example.testandroid;
+package com.example.testandroid.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.example.testandroid.R;
 import com.example.testandroid.controller.DevPagerAdapter;
 
 public class MenuActivity extends AppCompatActivity {

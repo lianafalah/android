@@ -25,7 +25,6 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class DrinksFragment extends Fragment {
-
 //    private AdapterRecyclerMenu adapterNonCoffe, adapterCoffe, adapterFrappeCoffe, adapterFrappeJuice,
 //            adapterTea, adapterFrappeCream;
     private RecyclerView mItemList ;
@@ -60,6 +59,4 @@ public class DrinksFragment extends Fragment {
         super.onAttach(context);
         mContext = context;
     }
-
-
 }

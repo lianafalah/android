@@ -19,13 +19,11 @@
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="normal"/>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/black"
         android:layout_marginTop="10dp"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +31,6 @@
         android:layout_marginTop="10dp"
         android:textSize="17sp"
         android:textColor="@color/gray"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,11 +39,9 @@
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="normal"/>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,7 +51,6 @@
             android:padding="5dp"
             android:layout_marginLeft="-5dp"
             android:textColor="@color/green_signup"/>
-
         <TextView
             android:id="@+id/balance"
             android:layout_width="wrap_content"
@@ -67,7 +61,6 @@
             android:layout_marginRight="60dp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,7 +72,6 @@
             android:layout_marginLeft="-5dp"
             android:layout_marginTop="-5dp"
             android:textColor="@color/green_signup"/>
-
         <TextView
             android:id="@+id/beans"
             android:layout_width="wrap_content"
@@ -93,7 +85,6 @@
             android:textColor="@color/black"
             android:textStyle="bold"/>
     </RelativeLayout>
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"

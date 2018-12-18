@@ -1,4 +1,4 @@
-package com.example.testandroid;
+package com.example.testandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.testandroid.R;
 
 public class HomeAppActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

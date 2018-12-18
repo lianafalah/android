@@ -1,15 +1,16 @@
-package com.example.testandroid;
-import android.app.ProgressDialog;
-import android.content.Context;
+package com.example.testandroid.activity;
 import android.content.Intent;
+import android.renderscript.ScriptGroup;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.testandroid.R;
 import com.example.testandroid.data.ApiClient;
 import com.example.testandroid.data.ApiService;
 import com.example.testandroid.model.Login;
@@ -38,12 +39,9 @@ public class LoginActivity extends AppCompatActivity {
         EditText email = findViewById(R.id.EmailEt);
         EditText password = findViewById(R.id.passwordED);
         //Call<LoginResponse> call = apiService.postLoginData(email.getText().toString(), password.getText().toString(), "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
-
-
         Log.i("### PASS ", "login: " + password.getText().toString());
         Login Body = new Login(email.getText().toString(), password.getText().toString());
         Call<LoginResponse> call = apiService.postLoginData(Body, "Bearer EbxWTaZzRglQfyjvBYoldy5FfiKW2vSNjrybnSqo");
-
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
@@ -60,12 +58,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
             }
-
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Log.i("### ERROR", "onFailure: " + t.getMessage());
             }
         });
     }
+
 }
 
