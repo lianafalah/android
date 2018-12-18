@@ -47,12 +47,16 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if(response.isSuccessful()) {
 
-                    Log.i("### token", "onResponse login: " + response.body().token);
-                    Log.i("### username", "onResponse login: " + response.body().username);
-                    Log.i("### foto", "onResponse login: " + response.body().foto);
-                    Log.i("### status", "onResponse login: " + response.body().status);
-                    Log.i("### mobilePhoneUser", "onResponse login: " + response.body().mobilePhoneUser);
+                    if(response.body() != null) {
+                        Log.i("### token", "onResponse login: " + response.body().token);
+                        Log.i("### username", "onResponse login: " + response.body().username);
+                        Log.i("### foto", "onResponse login: " + response.body().foto);
+                        Log.i("### status", "onResponse login: " + response.body().status);
+                        Log.i("### mobilePhoneUser", "onResponse login: " + response.body().mobilePhoneUser);
+                    }
+
                     Intent home= new Intent(LoginActivity.this, HomeAppActivity.class);
+                    home.putExtra("UserToken", response.body().token);
                     startActivity(home);
                 } else {
                 }
