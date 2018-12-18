@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import okhttp3.OkHttpClient;
 //import okhttp3.logging.HttpLoggingInterceptor;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -15,10 +16,10 @@ public class ApiClient {
         OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
         OkHttpClient okHttpClient;
 
-        /*
+
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor()
                 .setLevel(HttpLoggingInterceptor.Level.BODY);
-        okHttpClient = clientBuilder.addInterceptor(loggingInterceptor).build();*/
+        okHttpClient = clientBuilder.addInterceptor(loggingInterceptor).build();
 
         if (retrofit==null) {
             retrofit = new Retrofit.Builder()
