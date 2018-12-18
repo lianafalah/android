@@ -55,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
                     Intent home= new Intent(LoginActivity.this, HomeAppActivity.class);
                     startActivity(home);
                 } else {
-
                 }
             }
             @Override
