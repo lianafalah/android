@@ -6,6 +6,9 @@
     android:orientation="vertical"
     tools:context=".view.DrinksFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
@@ -300,5 +303,6 @@
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
 
 </LinearLayout>

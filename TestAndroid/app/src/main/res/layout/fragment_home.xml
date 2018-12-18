@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -102,11 +103,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/whiteTransparentBottom"
-            android:behavior_peekHeight="200dp"
-            android:behavior_hideable="false"
             android:orientation="vertical"
             android:padding="10dp"
-            android:layout_behavior="@string/bottom_sheet_behavior">
+            >
+            <!--android:behavior_peekHeight="200dp"-->
+            <!--android:behavior_hideable="false"-->
+
+            <!--android:layout_behavior="@string/bottom_sheet_behavior">-->
 
             <TextView
                 android:id="@+id/primeToPay"
@@ -201,4 +204,4 @@
     </android.support.design.widget.CoordinatorLayout>
 
 
-</layout>
+</LinearLayout>

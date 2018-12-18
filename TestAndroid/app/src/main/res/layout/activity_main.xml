@@ -35,7 +35,6 @@
         android:textColor="#fff" />
 
     <Button
-
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@drawable/button"
